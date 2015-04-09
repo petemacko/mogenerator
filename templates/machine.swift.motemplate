@@ -79,7 +79,7 @@ class _<$managedObjectClassName$>: <$customSuperentity$> {
 <$foreach Relationship noninheritedRelationships do$>
 <$if Relationship.isToMany$>
     @NSManaged
-    var <$Relationship.name$>: <$Relationship.immutableCollectionClassName$>
+    var <$Relationship.name$>: Set<<$Relationship.destinationEntity.managedObjectClassName$>>
 
 <$else$>
     @NSManaged
